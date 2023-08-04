@@ -1,0 +1,151 @@
+.navbar{
+    background-color: #010409;
+}
+
+.navbar-nav   {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar a {
+    color: #eee;
+    text-decoration: none;
+    padding: 9px 10px;
+    transition: 2s;
+    border-radius: 4px;
+    display: flex;
+    line-height: 0;
+    align-items: center;
+    margin: 0 2px;
+}
+
+.navbar a:hover{
+    background-color: #222;
+    transition: .3s;
+}
+
+.navbar li svg{
+    display: block;
+    background: #7d8590;
+    margin-right: 6px;
+    color: #010409;
+    padding: 4px;
+    border-radius: 40px;
+}
+
+.current{
+    border-bottom: 1px solid #2f81f7;
+}
+
+.show-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+    }
+
+    .navbar-nav .item-transparencia {
+        border-top: 1px solid var(--gray-blue);
+        width: 100%;
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .show-mobile{
+        display:flex ;
+    }
+
+    .menu-sandwish {
+        color: #ccc;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 30px;
+    }
+
+    .sandwish{
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .hide {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    }
+    
+    .show {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .footer-info-container .row{
+        flex-direction: column;
+    }
+
+    .leyenda-container {
+        position: unset;
+        opacity: 1;
+        margin: 0 auto;
+        width:auto ;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        background: #eee;
+        color: #777;
+        font-style: italic;
+    }
+
+    .leyenda-header-container, .separador {
+        display: none;
+    }
+
+    .leyenda-text {
+        font-size: 16px;
+        display: flex;
+        line-height: normal;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .leyenda-arrow-icon {
+        padding: 7px 10px 0px 10px;
+        background: #fff;
+    }
+
+    .footer-info {
+        margin-top: 1rem;
+        padding: 0;
+        margin: 7px;
+        text-align: center;
+    }
+
+    .footer-links{
+        border: none;
+    }
+
+    .footer-info-list {
+        text-align: center;
+        margin: 5px;
+        padding: 0;
+        border-top: 1px solid;
+    }
+
+
+    
+  }

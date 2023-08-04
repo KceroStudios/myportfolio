@@ -6,6 +6,11 @@ const Header = ({position}) => {
             <div class='container'>
                 <div class='header-info'>
                     <h1>Edison Gomez Jose</h1>
+                    <ul>
+                        <li><a>G</a></li>
+                        <li><a>F</a></li>
+                        <li><a>I</a></li>
+                    </ul>
                 </div>
                 <div class='photo'>
                     <div className="circle">
