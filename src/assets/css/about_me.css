@@ -1,0 +1,113 @@
+.description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.areas {
+    width: 40%;
+    padding-left: 30px;
+}
+
+.resume{
+    text-align: right;
+    border-right: 1px solid #fff;
+    padding-right: 30px;
+    color: #ccc;
+    width: 60%;
+
+}
+
+.resume p{
+    opacity: 1;
+    transition: 2.5s;
+}
+
+.numbers ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.numbers ul li{
+    display: block;
+    transform: rotate(90deg);
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #777;
+}
+
+.numbers span {
+    border-left: 1px dashed #777;
+    height: 110px;
+    display: flex;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: -110px;
+}
+
+.progress li {
+    display: flex;
+    margin-top: 3px;
+    padding: 1px 10px;
+    font-size: 12px;
+}
+
+.progress .p1 {
+    background: #1f71ebc2;
+    width: 85%;
+    transition: .5s;
+} 
+
+.progress .p2 {
+    background: #1f71eb75;
+    width: 80%;
+    transition: 1s;
+}
+
+.progress .p3 {
+    background: #1f71eb3b;
+    width: 40%;
+    transition: 1.5s;
+}
+
+.progress .p4 {
+    background: #1f71eb78;
+    width: 70%;
+    transition: 2s;
+}
+
+.progress .p5 {
+    background: #1f71eb59;
+    width: 50%;
+    transition: 2.5s;
+}
+
+.progress .pp {
+    width: 20%;
+    background: #1f71eb;
+}
+
+.resume .pp{
+    opacity: 0;
+}
