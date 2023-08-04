@@ -20,7 +20,7 @@ const MainMenu = () => {
                 <div className={`${showHide}`} >
                     <ul class="navbar-nav" >
                         <li className={current === 'about' ? 'current' : ''}>
-                            <a onClick={() => currentOnClick('about')} href="#">
+                            <a onClick={() => currentOnClick('about')} href="#me">
                                 <GoHome /> About Me
                             </a>
       </li>

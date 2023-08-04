@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './Components/Header';
 import MainMenu from './Components/MainMenu';
+import AboutMe from './Components/AboutMe';
 
 import React, { useState, useRef } from 'react';
 
@@ -47,6 +48,7 @@ function App() {
     <div className="App"  onMouseMove={handleMouseMove}  ref={containerRef}>
       <Header position={getPosition()} />
       <MainMenu />
+      <AboutMe />
     </div>
   );
 }
