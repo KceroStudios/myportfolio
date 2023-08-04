@@ -48,6 +48,7 @@ header h2 {
 
 .photo{
     margin-top: 20px;
+    transition: .5s;
 }
 
 .photo-1 {
@@ -95,6 +96,12 @@ header h2 {
     background-image: url(../image/photo-nw.png);
     transition: .5s;
 }
+
+.photo-1:active {
+    background-image: url(../image/photo-clk.png);
+}
+
+
 
 .photo .circle {
     background-color: #eee;
