@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import MainMenu from './Components/MainMenu';
 import AboutMe from './Components/AboutMe';
-import YourComponent from './Components/Prueba';
+import VisibleAnimate from './Components/VisibleAnimate';
 
 import React, { useState, useRef } from 'react';
 
@@ -47,7 +47,9 @@ function App() {
 
   return (
     <div className="App"  onMouseMove={handleMouseMove}  ref={containerRef}>
-      <YourComponent/>
+      <VisibleAnimate>
+        sfsdfsfsfhgjkghkjgkjgkghkjghkghjkg
+      </VisibleAnimate>
       <Header position={getPosition()} />
       <MainMenu />
       <AboutMe />
