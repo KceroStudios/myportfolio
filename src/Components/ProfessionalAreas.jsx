@@ -8,7 +8,7 @@ const ProfessionalAreas = () => {
         setProgress('')
       }, []);
     return(
-        <>
+        <div class='description'>
             <div class='resume'>
                 <p  className={`${progress}`}><i> With over 12 years of expertise in graphic design and frontend development, 
                         I bring creativity, proactivity, and a consistent drive to learn and adopt new technologies and tools.
@@ -51,7 +51,7 @@ const ProfessionalAreas = () => {
                     <li className={`${progress} p5`}>Narrative</li>
                 </ul>
             </div>
-        </>
+        </div>
     )
 }
 
