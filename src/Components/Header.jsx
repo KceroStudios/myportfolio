@@ -1,4 +1,6 @@
 import '../assets/css/header.css'
+import { GoMail } from "react-icons/go";
+import { BiPhoneCall, BiLogoGithub, BiLogoLinkedinSquare, BiLogoInstagramAlt } from "react-icons/bi";
 
 const Header = ({position}) => {
     return(
@@ -6,10 +8,12 @@ const Header = ({position}) => {
             <div class='container'>
                 <div class='header-info'>
                     <h1>Edison Gomez Jose</h1>
+                    <h2> kcerostudios@gmail.com <GoMail/></h2>
+                    <h2>( 201 ) 362 5030 <BiPhoneCall/></h2>
                     <ul>
-                        <li><a>G</a></li>
-                        <li><a>F</a></li>
-                        <li><a>I</a></li>
+                        <li><a><BiLogoGithub/></a></li>
+                        <li><a><BiLogoLinkedinSquare/></a></li>
+                        <li><a><BiLogoInstagramAlt/></a></li>
                     </ul>
                 </div>
                 <div class='photo'>

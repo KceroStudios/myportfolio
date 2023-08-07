@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-function VisibleAnimate({children}) {
+function VisibleAnimate({children, customClass}) {
   const [animation, setAnimation] = useState('')
   const targetRef = useRef(null)
 
@@ -32,8 +32,7 @@ function VisibleAnimate({children}) {
 
 
   return (
-    <div className={animation} ref={targetRef}>
-      
+    <div className={animation} ref={targetRef}>    
         {children}
     </div>
   );
