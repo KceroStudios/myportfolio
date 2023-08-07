@@ -47,9 +47,6 @@ function App() {
 
   return (
     <div className="App"  onMouseMove={handleMouseMove}  ref={containerRef}>
-      <VisibleAnimate>
-        sfsdfsfsfhgjkghkjgkjgkghkjghkghjkg
-      </VisibleAnimate>
       <Header position={getPosition()} />
       <MainMenu />
       <AboutMe />

@@ -1,12 +1,11 @@
 import { GoNoEntry, GoPlusCircle } from "react-icons/go";
-import { useState, useEffect } from "react";
+import { useState} from "react";
+import VisibleAnimate from "./VisibleAnimate";
 
 const Job = ({year, company, position, description, logo}) =>{
     const [bottomClose, setBottonClose] = useState('hide') 
     const [bottomOpen, setBottonOpen] = useState('show') 
-    const [cardAnimation, setCardAnimation] = useState('animation_on')
-    const [timer, setTimer] = useState(1)
-
+  
     const btnClose= () =>{
         setBottonClose('hide')
         setBottonOpen('open')
@@ -15,16 +14,11 @@ const Job = ({year, company, position, description, logo}) =>{
         setBottonOpen('hide')
         setBottonClose('show')
     }
-    useEffect(()=>{
-        setTimeout(function(){
-            setCardAnimation('')
-        }, timer)    
-    })
-
+  
     return(
-        <div className="job">
-            <div class='year'><i className={cardAnimation}>{year}</i> <span className={cardAnimation}></span></div>
-            <div className={`${cardAnimation} info`}>
+        <VisibleAnimate>      
+            <div class='year'><i>{year}</i> <span></span></div>
+            <div className= 'info'>
                 <div className="company">
                     <h4>{company} <span>{position}</span></h4>
                     <img src={require(`../assets/image/${logo}`)}/>
@@ -33,8 +27,8 @@ const Job = ({year, company, position, description, logo}) =>{
                 <p className= {bottomClose} >{description}</p>
                 <a className= {bottomClose} onClick={btnClose}><GoNoEntry/></a>
                 <a className= {bottomOpen} onClick={btnOpen}><GoPlusCircle/></a>
-            </div>
         </div>
+        </VisibleAnimate>
     )
 }
 

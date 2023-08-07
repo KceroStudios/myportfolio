@@ -21,7 +21,20 @@
 }
 
 .resume p{
+    opacity: 0;
+    transform: scale(1.1);
+    transition: 2.5s;
+}
+
+.animation_on .resume p{
     opacity: 1;
+    transform: scale(1);
+    transition: 2.5s;
+}
+
+.animation_off .resume p{
+    opacity: 0;
+    transform: scale(1.1);
     transition: 2.5s;
 }
 
@@ -71,53 +84,61 @@
     margin-top: 3px;
     padding: 1px 10px;
     font-size: 12px;
+    width: 20%;
+    opacity: 0;
+    transition: 2s;
 }
 
-.progress .p1 {
+.animation_on .progress li.p1 {
     background: #1f71ebc2;
     width: 85%;
+    opacity: 1;
     transition: .5s;
 } 
 
-.progress .p2 {
+.animation_on  .progress li.p2 {
     background: #1f71eb75;
     width: 80%;
+    opacity: 1;
     transition: 1s;
 }
 
-.progress .p3 {
+.animation_on .progress li.p3 {
     background: #1f71eb3b;
+    opacity: 1;
     width: 40%;
     transition: 1.5s;
 }
 
-.progress .p4 {
+.animation_on .progress li.p4 {
     background: #1f71eb78;
+    opacity: 1;
     width: 70%;
     transition: 2s;
 }
 
-.progress .p5 {
+.animation_on .progress li.p5 {
     background: #1f71eb59;
+    opacity: 1;
     width: 50%;
     transition: 2.5s;
 }
 
-.progress .pp {
+.animation_off .progress li {
     width: 20%;
     background: #1f71eb;
+    opacity: .1;
+    transition: 1s;
 }
 
-.resume .pp{
-    opacity: 0;
-}
 
-.experience h3 {
+
+h3 {
     border-left: #1f71eb 2px solid;
     padding-left: 5px;
 }
 
-.experience h3 span {
+h3 span {
     font-weight: normal;
     color: #78808b;
 }
@@ -129,7 +150,7 @@
     flex-wrap: wrap;
 }
 
-.job{
+.job_group .animation_off, .job_group .animation_on{
     width: 30%;
     font-size: 14px;
     margin-bottom: 10px;
@@ -141,22 +162,42 @@
     align-items: center;
 }
 
-.year span{
-    display: flex;
-    border-bottom: 1px solid #484f58;
-    width: 100%;
-    transition: 2s;
-}
-
 .year i {
     display: flex;
     padding: 2px 8px;
     border-radius: 4px;
     color: #2f81e9;
     border: 1px solid #484f58;
+}
+
+.animation_on .year i {
     opacity: 1;
     transition: 2s;
 
+}
+
+.animation_off .year i {
+    opacity: .1;
+    transition: 2s;
+}
+
+.year span{
+    display: flex;
+    border-bottom: 1px solid #484f58;
+    width: 1%;
+    transition: 2s;
+}
+
+.animation_on .year span{
+    display: flex;
+    border-bottom: 1px solid #484f58;
+    width: 100%;
+    transition: 2s;
+}
+
+.animation_off .year span{
+    width: 1%;
+    transition: 2s;
 }
 
 .info {
@@ -166,8 +207,24 @@
     border-radius: 5px;
     opacity: 1;
     transition: 3s;
+}
+
+.info p{
+    height:70px;
+}
+
+.animation_on.info{
+    opacity: 1;
+    transition: 2s;
 
 }
+
+.animation_off .info{
+    opacity: 0;
+    transition: 2s;
+
+}
+
 
 .company {
     display: flex;
@@ -192,14 +249,13 @@
     font-weight: normal;
 }
 
-
 .info a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     cursor: pointer;
     transition: .5s;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .info a:hover {
@@ -208,31 +264,184 @@
 }
 
 .show{
-    display: flex !important;
-    transition: .5s;
+    opacity: 1;
+    height: auto;
+    transition: opacity 3s ease, height 1s ease;
 
 }
 
 .hide{
-    display: none !important;
-    transition: .5s;
+opacity: 0;
+  height: 0 !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  transition: opacity 1s ease, height 1s ease;
 
 }
 
-/* animation cards professional experience */
+/* skills css */
 
-.year i.animation_on {
-    opacity: .1;
-    transition: 2s;
+.skills_group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.year span.animation_on{
+.skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skills_group .animation_on {
+    width: 20%;
+}
+
+.skills_group svg {
+    font-size: 25px;
+}
+
+.skill_progress {
+    border: 1px solid #6e7784;
+    width: 100%;
+    height: 12px;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.skill_progress .progress_bar {
+    background: #6e7784;
     width: 1%;
-    transition: 2s;
+    height: 100%;
+    transition: .5s;
+    display: flex;
 }
 
-.animation_on.info{
-    opacity: 0;
-    transition: 2s;
+.animation_on .skill_progress .progress_bar {
+    transition: .5s;
+}
 
+.animation_off .skill_progress .progress_bar {
+    width: 1%;
+    transition: .5s;
+}
+
+.html5 svg{
+    color: #e26f03;
+}
+
+.css3 svg{
+    color: #0394e2;
+}
+
+.js svg{
+    color: #fcc706;
+}
+
+.react svg{
+    color: #06ecfc;
+}
+
+.csharp svg{
+    color: #9c46fe;
+}
+
+.ps svg{
+    color: #0066ff;
+}
+
+.ai svg{
+    color: #ff7300ec;
+}
+
+.id svg{
+    color: #fb00ffec;
+}
+
+.wp svg{
+    color: #4e77bdec;
+}
+
+.jla svg{
+    color: #e8b612ec;
+}
+
+.html5 .progress_bar, .css3 .progress_bar{
+    width: 90%;
+}
+
+.js .progress_bar{
+    width: 60%;
+}
+
+.react .progress_bar{
+    width: 80%;
+}
+
+.csharp .progress_bar{
+    width: 30%;
+}
+
+.ps .progress_bar{
+    width: 95%;
+}
+
+.ai .progress_bar{
+    width: 80%;
+}
+
+.id .progress_bar{
+    width: 60%;
+}
+
+.wp .progress_bar{
+    width: 70%;
+}
+
+.jla .progress_bar{
+    width: 70%;
+}
+
+.legend {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1px;
+    margin-left: 30px;
+}
+
+.legend span {
+    background: #0066ff;
+    font-size: 12px;
+    padding: 0px 14px;
+    border-radius: 2px;
+    color: #fff;
+    height: 20px;
+}
+
+.legend svg {
+    color: #0066ff;
+    margin: -3px -11px;
+    font-size: 25px;
+}
+
+.hide_legend {
+    opacity: 0;
+    transform: rotate(5deg);
+    margin-top: 12px;
+    transition: .5s;
+}
+
+.show_legend{
+    opacity: 1;
+    transform: rotate(0deg);
+    margin-top: 1px;
+    margin-left: 35px;
+    transition: .5s;
+    
 }

@@ -32,6 +32,28 @@ header .container {
     padding-left: 20px;
 }
 
+.header-info ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.header-info ul li{
+    display: flex;
+}
+
+.header-info ul li a{
+    color: #78808b;
+    transition: .5s;
+}
+
+.header-info ul li a:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
 header h1 {
     color: #fff;
     margin: 0;
@@ -40,10 +62,14 @@ header h1 {
 }
 
 header h2 {
-    color: #78808b;
+    color: #999;
     margin: 0;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: lighter;
+}
+
+header h2 svg{
+    color: #1f71eb;
 }
 
 .photo{

@@ -3,7 +3,7 @@ import '../assets/css/main_menu.css'
 import { GoKebabHorizontal, GoHome } from "react-icons/go";
 
 const MainMenu = () => {
-    const [showHide, setShowHide] = useState ('hide')
+    const [showHide, setShowHide] = useState ('')
     const showHideOnClick = () =>{
     setShowHide(showHide == 'show' ? 'hide' : 'show' )
     } 
