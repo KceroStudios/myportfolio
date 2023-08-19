@@ -1,13 +1,11 @@
 
 import './App.css';
-
 import Header from './Components/Header';
 import MainMenu from './Components/MainMenu';
 import AboutMe from './Components/AboutMe';
 import VisibleAnimate from './Components/VisibleAnimate';
 import Footer from './Components/Footer';
-
-
+import './assets/css/mediaquery.css'
 import React, { useState, useRef } from 'react';
 
 function App() {

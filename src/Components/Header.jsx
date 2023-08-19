@@ -4,7 +4,8 @@ import { BiPhoneCall, BiLogoGithub, BiLogoLinkedinSquare, BiLogoInstagramAlt, Bi
 
 const Header = ({position}) => {
     return(
-        <header >     
+        <header >   
+            <div className="alert">"BETA Version - 0.0 - We are making changes to provide you with a better experience." </div>         
             <div class='container'>
                 <div class='header-info'>
                     <h1>Edison Gomez Jose</h1>
