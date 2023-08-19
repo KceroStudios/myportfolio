@@ -38,8 +38,9 @@ header .container {
     margin: 0;
 }
 
-.header-info ul li{
+.header-info ul li {
     display: flex;
+    margin-left: 7px;
 }
 
 .header-info ul li a{

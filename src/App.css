@@ -8,3 +8,9 @@ body{
   margin: 0 auto;
   max-width: 1100px;
 }
+
+.fluid_container {
+  width: 100%;
+  background: #010409;
+  margin: 2rem 0;
+}
