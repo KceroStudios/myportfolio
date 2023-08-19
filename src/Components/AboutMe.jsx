@@ -6,12 +6,17 @@ import Training from './Training'
 
 const AboutMe = () =>{
     return(
-        <div id="me" class="container">
-           
+        <div id="me">
+           <div className="container">
                 <ProfessionalAreas/>
                 <Experience/>
                 <Skills />
+           </div>
+           <div className="fluid_container">
+            <div className="container">
                 <Training/>
+            </div>
+           </div>
 
            
         </div>

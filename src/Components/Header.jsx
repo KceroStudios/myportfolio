@@ -1,6 +1,6 @@
 import '../assets/css/header.css'
 import { GoMail } from "react-icons/go";
-import { BiPhoneCall, BiLogoGithub, BiLogoLinkedinSquare, BiLogoInstagramAlt } from "react-icons/bi";
+import { BiPhoneCall, BiLogoGithub, BiLogoLinkedinSquare, BiLogoInstagramAlt, BiLogoBehance } from "react-icons/bi";
 
 const Header = ({position}) => {
     return(
@@ -11,9 +11,10 @@ const Header = ({position}) => {
                     <h2> kcerostudios@gmail.com <GoMail/></h2>
                     <h2>( 201 ) 362 5030 <BiPhoneCall/></h2>
                     <ul>
-                        <li><a><BiLogoGithub/></a></li>
-                        <li><a><BiLogoLinkedinSquare/></a></li>
-                        <li><a><BiLogoInstagramAlt/></a></li>
+                        <li><a href='https://github.com/KceroStudios' target='_blank'><BiLogoGithub/></a></li>
+                        <li><a href='https://www.linkedin.com/in/egomezdeveloper/' target='_blank'><BiLogoLinkedinSquare/></a></li>
+                        <li><a href='https://www.behance.net/kcero' target='_blank'><BiLogoBehance/></a></li>
+                        <li><a href='https://www.instagram.com/kcerostudios/' target='_blank'><BiLogoInstagramAlt/></a></li>
                     </ul>
                 </div>
                 <div class='photo'>
